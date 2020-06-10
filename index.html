@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="happy-styles.css">
+        <title>Happy Things</title>
+        <h1 id="happythings">Happy<br>Things</h1>
+    </head>
+    <body>
+        <main> <!--House-yellow-->
+
+<div class="rooms"> <!--Room 1-white-->
+        <a href="people.html">People</a>
+</div>
+<div class="rooms"> <!--Room 2-white-->
+        <a href="places.html">Places</a>
+</div>
+<div class="rooms"> <!--Room 3-white-->
+        <a href="things.html">&Things</a>
+</div>
+</main>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="babies.jpg" style="width:100%">
+  <div class="text">Happy People - Babies</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="nature.jpg" style="width:100%">
+  <div class="text">Happy Places - Nature</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="books.jpg" style="width:100%">
+  <div class="text">Happy Things - Books</div>
+</div>
+
+<div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="grandmas.jpg" style="width:100%">
+        <div class="text">Happy People - Grandmas</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="home.jpg" style="width:100%">
+        <div class="text">Happy Places - Home</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="dessert.jpg" style="width:100%">
+        <div class="text">Happy Things - Dessert</div>
+      </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+        
+    </body>
+</html>
